@@ -37,16 +37,22 @@ class App extends Component {
     }
 
     handleLike = aptLiked => {
-        const apartmentsList = [...this.state.apartments];
+        let apartmentsList = [...this.state.apartments];
         const index = apartmentsList.indexOf(aptLiked);
         apartmentsList[index] = {...aptLiked};
-        let liked = apartmentsList[index].liked;
-        if (liked === false) {
-            liked = true;
+        let likedValue = apartmentsList[index].liked;
+        console.log("likedStart", likedValue);
+        if (likedValue === false) {
+            apartmentsList[index].liked = true;
             this.setState({apartments: apartmentsList});
+            console.log("clickedID", apartmentsList[index].id);
+            console.log("likedClicked", likedValue);
+            console.log("likedAptResult", apartmentsList[index]);
         } else {
-            liked = false;
+            apartmentsList[index].liked = false;
             this.setState({apartments: apartmentsList});
+            console.log("unlikedApts", apartmentsList);
+            console.log("likedClicked", likedValue);
         }
     }
 }
