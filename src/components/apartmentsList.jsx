@@ -5,7 +5,7 @@ class ApartmentsList extends Component {
     render() {
         const {onLike, apartments} = this.props;
         return (
-            <div>
+            <div className="row mx-auto d-inline-flex">
                 {apartments.map(apartment => (
                     <AptCard key={apartment.id}
                              onLike={onLike}

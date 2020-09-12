@@ -1,5 +1,6 @@
 {
   "name": "apt-list",
+  "author": "Irina Plaksina",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

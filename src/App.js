@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './App.css';
 import NavBar from "./components/navbar";
+import Jumbotron from "./components/jumbotron";
 import ApartmentsList from "./components/apartmentsList";
 import axios from "axios";
 
@@ -26,12 +26,14 @@ class App extends Component {
         return (
             <React.Fragment>
                 <NavBar/>
+                <Jumbotron/>
                 <main className="container">
                     <ApartmentsList
                         apartments={this.state.apartments}
                         onLike={this.handleLike}
                     />
                 </main>
+                <footer className="fixed-bottom text-center font-weight-bold p-3">Irina Plaksina &copy; 2020</footer>
             </React.Fragment>
         );
     }
@@ -41,18 +43,12 @@ class App extends Component {
         const index = apartmentsList.indexOf(aptLiked);
         apartmentsList[index] = {...aptLiked};
         let likedValue = apartmentsList[index].liked;
-        console.log("likedStart", likedValue);
         if (likedValue === false) {
             apartmentsList[index].liked = true;
             this.setState({apartments: apartmentsList});
-            console.log("clickedID", apartmentsList[index].id);
-            console.log("likedClicked", likedValue);
-            console.log("likedAptResult", apartmentsList[index]);
         } else {
             apartmentsList[index].liked = false;
             this.setState({apartments: apartmentsList});
-            console.log("unlikedApts", apartmentsList);
-            console.log("likedClicked", likedValue);
         }
     }
 }
