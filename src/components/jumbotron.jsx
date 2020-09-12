@@ -8,12 +8,14 @@ let jumbotronPicture = {
 
 const Jumbotron = () => {
     return (
-        <div className="jumbotron jumbotron-fluid" style={jumbotronPicture}>
-            <div className="container" >
-                <h1 className="display-4">Квартиры в Тюмени</h1>
-                <p className="lead">Выберите квартиру мечты</p>
+        <header>
+            <div className="jumbotron jumbotron-fluid mt-5" style={jumbotronPicture}>
+                <div className="container">
+                    <h1 className="display-4">Квартиры в Тюмени</h1>
+                    <p className="lead">Выберите квартиру мечты</p>
+                </div>
             </div>
-        </div>
+        </header>
     )
 }
 

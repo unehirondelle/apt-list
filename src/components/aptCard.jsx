@@ -1,12 +1,12 @@
 import React, {Component} from "react";
-import ApartmentPicture from "../assets/apartments/deborah-cortelazzi-gREquCUXQLI-unsplash.jpg";
+import ApartmentPicture from "../assets/apartment/deborah-cortelazzi-gREquCUXQLI-unsplash.jpg";
 
 class AptCard extends Component {
 
     render() {
         return (
-            <div key={this.props.id} className="card col-4 border-0 m-3 justify-content-center align-middle ">
-                <img className="card-img-top img-thumbnail img-fluid" src={ApartmentPicture} alt={`Apartment # ${this.props.id}`}/>
+            <div key={this.props.id} className="card col-sm-12 col-md-5 border-0 m-sm-1 m-md-4 p-0 justify-content-center align-middle ">
+                <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${this.props.id}`}/>
                 <div className="card-body">
                     <h5 className="card-title">
                         {this.props.title} <i className={this.getLikeClasses()}

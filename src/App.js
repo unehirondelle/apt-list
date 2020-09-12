@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import NavBar from "./components/navbar";
 import Jumbotron from "./components/jumbotron";
 import ApartmentsList from "./components/apartmentsList";
 import axios from "axios";
@@ -25,15 +24,14 @@ class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <NavBar/>
                 <Jumbotron/>
-                <main className="container">
+                <main className="container mb-5">
                     <ApartmentsList
                         apartments={this.state.apartments}
                         onLike={this.handleLike}
                     />
                 </main>
-                <footer className="fixed-bottom text-center font-weight-bold p-3">Irina Plaksina &copy; 2020</footer>
+                <footer className="fixed-bottom bg-light text-center font-weight-bold py-3">Irina Plaksina &copy; 2020</footer>
             </React.Fragment>
         );
     }
