@@ -9,9 +9,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        const url = "https://raw.githubusercontent.com/FrolovArkadiy/task_for_middle/master/entities.json";
-        axios.get(proxyUrl + url)
+        axios.get("../entities.json")
             .then(res => {
                 const apartments = res.data.response;
                 apartments.forEach(apartment => {
@@ -31,7 +29,8 @@ class App extends Component {
                         onLike={this.handleLike}
                     />
                 </main>
-                <footer className="fixed-bottom bg-light text-center font-weight-bold py-3">Irina Plaksina &copy; 2020</footer>
+                <footer className="fixed-bottom bg-light text-center font-weight-bold py-3">Irina Plaksina &copy; 2020
+                </footer>
             </React.Fragment>
         );
     }
