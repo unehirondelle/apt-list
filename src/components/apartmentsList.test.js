@@ -52,4 +52,3 @@ it("the AppartmentsList is rendered successfully", () => {
     ReactDOM.render(<ApartmentsList {...props} />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
-
