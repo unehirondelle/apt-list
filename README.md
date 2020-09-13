@@ -1,11 +1,11 @@
 ## ApartmentsList
 
-It's a web application that displays apartments available for sale in the city of Tyumen, Russia and allows the user to marked any of them liked. 
+It's a web application that displays apartments available for sale in the city of Tyumen, Russia, and allows the user to mark any of them as liked. 
 The application is front-end only.
 
 ## Run the application
 
-1. Make sure you have node.js and npm installed
+1. Make sure you have **node.js** and **npm** installed
 2. Download the project
 3. From the root directory type `npm i` to install all the dependancies from package.json
 4. Type `npm start` to activate the application
@@ -15,7 +15,7 @@ The application is front-end only.
 
 ## Run tests
 
-1. Make sure you have yarn installed
+1. Make sure you have **yarn** installed
 2. Type `yarn test` to run tests execution, press `a` to run all tests
 
 Tests cover all the components of the application are rendered as expected.
