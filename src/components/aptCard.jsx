@@ -6,7 +6,9 @@ class AptCard extends Component {
     render() {
         return (
             <div key={this.props.id}
-                 className="card col-sm-12 col-md-5 border-0 m-sm-1 m-md-4 p-0 justify-content-center align-middle ">
+                 className="card col-sm-12 col-md-5 border-0 m-sm-1 m-md-4 p-0 justify-content-center align-middle"
+                 data-testid="apartmentCard"
+            >
                 <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${this.props.id}`}/>
                 <div className="card-body">
                     <h5 className="card-title">
