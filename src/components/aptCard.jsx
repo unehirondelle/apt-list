@@ -11,7 +11,7 @@ class AptCard extends Component {
             >
                 <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${this.props.id}`}/>
                 <div className="card-body">
-                    <h5 className="card-title">
+                    <h5 className="card-title" data-testid="adName">
                         {this.props.title} <i className={this.getLikeClasses()}
                                               onClick={() => this.props.onLike(this.props.apartment)}> </i>
                     </h5>
