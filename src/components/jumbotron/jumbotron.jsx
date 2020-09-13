@@ -1,5 +1,5 @@
 import React from "react";
-import Background from "../assets/matthieu-gouiffes-iFRtKyim2Hs-unsplash.jpg";
+import Background from "../../assets/jumbotron-img.jpg";
 
 let jumbotronPicture = {
     backgroundImage: `url(${Background})`,

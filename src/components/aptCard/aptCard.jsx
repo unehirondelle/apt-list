@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ApartmentPicture from "../assets/apartment/deborah-cortelazzi-gREquCUXQLI-unsplash.jpg";
+import ApartmentPicture from "../../assets/apartment.jpg";
 
 class AptCard extends Component {
 

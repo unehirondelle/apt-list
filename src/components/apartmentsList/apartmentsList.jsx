@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import AptCard from "./aptCard";
+import AptCard from "../aptCard/aptCard";
 
 class ApartmentsList extends Component {
     render() {

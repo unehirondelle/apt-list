@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Jumbotron from "./components/jumbotron";
-import ApartmentsList from "./components/apartmentsList";
+import Jumbotron from "./components/jumbotron/jumbotron";
+import ApartmentsList from "./components/apartmentsList/apartmentsList";
 import axios from "axios";
 
 class App extends Component {
