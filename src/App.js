@@ -9,7 +9,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        axios.get("../entities.json")
+        axios.get("../apt-list/entities.json")
             .then(res => {
                 const apartments = res.data.response;
                 apartments.forEach(apartment => {
