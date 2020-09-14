@@ -3,7 +3,11 @@
 It's a web application that displays apartments available for sale in the city of Tyumen, Russia, and allows the user to mark any of them as liked. 
 The application is front-end only.
 
-## Run the application
+## Deployed version of the app
+
+https://unehirondelle.github.io/apt-list/
+
+## Run the application locally
 
 1. Make sure you have **node.js** and **npm** installed
 2. Download the project
