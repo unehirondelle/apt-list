@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55be1956e20287b8fac35ccf6dea08ac",
+    "revision": "d5d869819c1378f40ac0f31f4e8348ab",
     "url": "/apt-list/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/apt-list/static/css/2.6ee32efb.chunk.css"
   },
   {
-    "revision": "7e1aee04a113cb533ca0",
+    "revision": "14eae906ea206e91984b",
     "url": "/apt-list/static/css/main.b2f8daa9.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/apt-list/static/js/2.b55f75c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7e1aee04a113cb533ca0",
-    "url": "/apt-list/static/js/main.23d07ec5.chunk.js"
+    "revision": "14eae906ea206e91984b",
+    "url": "/apt-list/static/js/main.86090297.chunk.js"
   },
   {
     "revision": "aa53571a350b8535ddee",

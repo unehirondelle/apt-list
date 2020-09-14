@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/apt-list/static/css/main.b2f8daa9.chunk.css",
-    "main.js": "/apt-list/static/js/main.23d07ec5.chunk.js",
-    "main.js.map": "/apt-list/static/js/main.23d07ec5.chunk.js.map",
+    "main.js": "/apt-list/static/js/main.86090297.chunk.js",
+    "main.js.map": "/apt-list/static/js/main.86090297.chunk.js.map",
     "runtime-main.js": "/apt-list/static/js/runtime-main.4022146b.js",
     "runtime-main.js.map": "/apt-list/static/js/runtime-main.4022146b.js.map",
     "static/css/2.6ee32efb.chunk.css": "/apt-list/static/css/2.6ee32efb.chunk.css",
     "static/js/2.b55f75c5.chunk.js": "/apt-list/static/js/2.b55f75c5.chunk.js",
     "static/js/2.b55f75c5.chunk.js.map": "/apt-list/static/js/2.b55f75c5.chunk.js.map",
     "index.html": "/apt-list/index.html",
-    "precache-manifest.847d72854c9ee3021e2687696e8957e4.js": "/apt-list/precache-manifest.847d72854c9ee3021e2687696e8957e4.js",
+    "precache-manifest.c7a4e51b12f893136ffe5859582aa0df.js": "/apt-list/precache-manifest.c7a4e51b12f893136ffe5859582aa0df.js",
     "service-worker.js": "/apt-list/service-worker.js",
     "static/css/2.6ee32efb.chunk.css.map": "/apt-list/static/css/2.6ee32efb.chunk.css.map",
     "static/css/main.b2f8daa9.chunk.css.map": "/apt-list/static/css/main.b2f8daa9.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.6ee32efb.chunk.css",
     "static/js/2.b55f75c5.chunk.js",
     "static/css/main.b2f8daa9.chunk.css",
-    "static/js/main.23d07ec5.chunk.js"
+    "static/js/main.86090297.chunk.js"
   ]
 }
