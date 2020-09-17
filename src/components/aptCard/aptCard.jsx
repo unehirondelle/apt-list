@@ -4,6 +4,9 @@ import {ApartmentContext} from "../../context";
 
 export default function AptCard() {
     const apartment = useContext(ApartmentContext);
+    const {title, address, area, unit} = apartment.attributes;
+    const {city, street, house, room} = address;
+    const {first_name, middle_name, last_name} = apartment.relationships.attributes;
 
     return (
         <div key={apartment.id}
@@ -13,20 +16,20 @@ export default function AptCard() {
             <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${apartment.id}`}/>
             <div className="card-body">
                 <h5 className="card-title" data-testid="adName">
-                    {apartment.attributes.title}
+                    {title}
                     {/*<i className={getLikeClasses()}
                                           onClick={() => onLike(apartment)}> </i>*/}
                 </h5>
                 <h6 className="card-subtitle mb-2 text-muted">
-                    г. {apartment.attributes.address.city},
+                    г. {city},
                     <br/>
-                    ул. {apartment.attributes.address.street},
-                    д. {apartment.attributes.address.house},
-                    кв. {apartment.attributes.address.room}</h6>
+                    ул. {street},
+                    д. {house},
+                    кв. {room}</h6>
                 <p className="card-text">
-                    <i className="bx bxl-codepen"></i> {apartment.attributes.area} {apartment.attributes.unit}
+                    <i className="bx bxl-codepen"></i> {area} {unit}
                     <br/>
-                    <i className="bx bx-user"></i> {apartment.relationships.attributes.last_name} {apartment.relationships.attributes.first_name} {apartment.relationships.attributes.middle_name}
+                    <i className="bx bx-user"></i> {last_name} {first_name} {middle_name}
                 </p>
             </div>
         </div>
