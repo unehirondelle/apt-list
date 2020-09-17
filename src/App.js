@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import ReactDOM from "react-dom";
 import Jumbotron from "./components/jumbotron/jumbotron";
 import ApartmentsList from "./components/apartmentsList/apartmentsList";
 import axios from "axios";
 
 export default function App() {
     let [apartments, setApartments] = useState([]);
+
     useEffect(() => {
         axios.get("../apt-list/entities.json")
             .then(res => {
@@ -15,10 +15,10 @@ export default function App() {
                 });
                 setApartments(apartments);
             });
-    }, []);
+    }, [apartments]);
 
     return (
-        <React.Fragment>
+        <>
             <Jumbotron/>
             <main className="container mb-5">
                 <ApartmentsList
@@ -28,7 +28,7 @@ export default function App() {
             </main>
             <footer className="fixed-bottom bg-light text-center font-weight-bold py-3">Irina Plaksina &copy; 2020
             </footer>
-        </React.Fragment>
+        </>
     );
 
     /*function handleLike(aptLiked) {
@@ -46,8 +46,7 @@ export default function App() {
     }*/
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App/>, rootElement);
+
 
 /*
 class App extends Component {

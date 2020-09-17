@@ -1,30 +1,32 @@
-import React from "react";
+import React, {useContext} from "react";
 import ApartmentPicture from "../../assets/apartment.jpg";
+import {ApartmentContext} from "../../context";
 
-export default function AptCard({key, liked, apartment, id, title, city, street, building, apartmentNumber, apartmentArea, areaUnit, agentFirstName, agentMiddleName, agentLastName}) {
+export default function AptCard() {
+    const apartment = useContext(ApartmentContext);
 
     return (
-        <div key={id}
+        <div key={apartment.id}
              className="card col-sm-12 col-md-5 border-0 m-sm-1 m-md-4 p-0 justify-content-center align-middle"
              data-testid="apartmentCard"
         >
-            <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${id}`}/>
+            <img className="card-img-top img-fluid" src={ApartmentPicture} alt={`Apartment # ${apartment.id}`}/>
             <div className="card-body">
                 <h5 className="card-title" data-testid="adName">
-                    {title}
+                    {apartment.attributes.title}
                     {/*<i className={getLikeClasses()}
                                           onClick={() => onLike(apartment)}> </i>*/}
                 </h5>
                 <h6 className="card-subtitle mb-2 text-muted">
-                    г. {city},
+                    г. {apartment.attributes.address.city},
                     <br/>
-                    ул. {street},
-                    д. {building},
-                    кв. {apartmentNumber}</h6>
+                    ул. {apartment.attributes.address.street},
+                    д. {apartment.attributes.address.house},
+                    кв. {apartment.attributes.address.room}</h6>
                 <p className="card-text">
-                    <i className="bx bxl-codepen"></i> {apartmentArea} {areaUnit}
+                    <i className="bx bxl-codepen"></i> {apartment.attributes.area} {apartment.attributes.unit}
                     <br/>
-                    <i className="bx bx-user"></i> {agentLastName} {agentFirstName} {agentMiddleName}
+                    <i className="bx bx-user"></i> {apartment.relationships.attributes.last_name} {apartment.relationships.attributes.first_name} {apartment.relationships.attributes.middle_name}
                 </p>
             </div>
         </div>
