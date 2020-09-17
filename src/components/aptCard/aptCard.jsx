@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import ApartmentPicture from "../../assets/apartment.jpg";
-import {ApartmentContext} from "../../context";
+import {ApartmentContext} from "../../apartmentsContext";
 
 export default function AptCard() {
     const apartment = useContext(ApartmentContext);

@@ -3,19 +3,26 @@ import Jumbotron from "./components/jumbotron/jumbotron";
 import ApartmentsList from "./components/apartmentsList/apartmentsList";
 import axios from "axios";
 
+const localStorageKey = "apartmentsListStorage";
+
 export default function App() {
     let [apartments, setApartments] = useState([]);
 
     useEffect(() => {
         axios.get("../apt-list/entities.json")
             .then(res => {
-                apartments = res.data.response;
-                apartments.forEach(apartment => {
-                    apartment.liked = false;
-                });
-                setApartments(apartments);
+                setApartments(res.data.response);
             });
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem(localStorageKey, JSON.stringify(apartments));
     }, [apartments]);
+
+    useEffect(() => {
+        const storedApartments = JSON.parse(localStorage.getItem(localStorageKey));
+        if (storedApartments) setApartments(storedApartments);
+    }, []);
 
     return (
         <>
