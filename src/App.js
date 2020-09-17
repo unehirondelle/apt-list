@@ -11,12 +11,10 @@ export default function App() {
     useEffect(() => {
         axios.get("../apt-list/entities.json")
             .then(res => {
-                setApartments(res.data.response);
+                const apartments = res.data.response;
+                apartments.map(item => item.liked = false);
+                localStorage.setItem(localStorageKey, JSON.stringify(apartments));
             });
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem(localStorageKey, JSON.stringify(apartments));
     }, [apartments]);
 
     useEffect(() => {
@@ -52,7 +50,6 @@ export default function App() {
         }
     }*/
 }
-
 
 
 /*
