@@ -1,19 +1,13 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import ApartmentPicture from "../../assets/apartment.jpg";
-import {ApartmentContext, HandleLikeContext} from "../../state/context";
+import {ApartmentContext} from "../../state/context";
+import LikeToggle from "../likeToggle/likeToggle";
 
 export default function AptCard() {
     const apartment = useContext(ApartmentContext);
-    const onLike = useContext(HandleLikeContext);
-
-    const {liked} = apartment;
     const {title, address, area, unit} = apartment.attributes;
     const {city, street, house, room} = address;
     const {first_name, middle_name, last_name} = apartment.relationships.attributes;
-
-    useEffect(() => {
-
-    })
 
     return (
         <div key={apartment.id}
@@ -24,7 +18,7 @@ export default function AptCard() {
             <div className="card-body">
                 <h5 className="card-title" data-testid="adName">
                     {title}
-                    <i className={getLikeClasses()} onClick={() => onLike(apartment)}/>
+                    <LikeToggle/>
                 </h5>
                 <h6 className="card-subtitle mb-2 text-muted">
                     г. {city},
@@ -41,9 +35,4 @@ export default function AptCard() {
         </div>
     );
 
-    function getLikeClasses() {
-        let classes = "bx ";
-        classes += (!liked) ? "bx-heart" : "bxs-heart";
-        return classes;
-    }
 }
