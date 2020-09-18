@@ -18,7 +18,7 @@ export default function AptCard() {
             <div className="card-body">
                 <h5 className="card-title" data-testid="adName">
                     {title}
-                    <LikeToggle/>
+                    <LikeToggle key={apartment.id} />
                 </h5>
                 <h6 className="card-subtitle mb-2 text-muted">
                     г. {city},

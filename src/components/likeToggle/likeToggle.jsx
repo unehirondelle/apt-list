@@ -1,22 +1,23 @@
-import React, {useContext, useState} from "react";
-import {ApartmentContext} from "../../state/context";
+import React, {useContext} from "react";
+import {ApartmentContext, LikesContext} from "../../state/context";
 
 export default function LikeToggle() {
-    let [liked, toggleLike] = useState(false);
 
     let apartment = useContext(ApartmentContext);
+    const likeToggled = useContext(LikesContext);
 
     return (
-        <i id={apartment.id} className={getLikeClasses()} onClick={handleLikeToggle}/>
-    )
+        <i id={apartment.id} className={getLikeClasses()} onClick={handleApartmentLiked}
+        />
+    );
 
-    function handleLikeToggle(event) {
-       if(event) toggleLike(!liked);
+    function handleApartmentLiked() {
+        likeToggled(apartment.id);
     }
 
     function getLikeClasses() {
         let classes = "bx ";
-        classes += (!liked) ? "bx-heart" : "bxs-heart";
+        classes += (!apartment.liked) ? "bx-heart" : "bxs-heart";
         return classes;
     }
 }
