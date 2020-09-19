@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import ApartmentPicture from "../../assets/apartment.jpg";
-import {ApartmentContext} from "../../apartmentsContext";
+import {ApartmentContext} from "../../state/context";
+import LikeToggle from "../likeToggle/likeToggle";
 
 export default function AptCard() {
     const apartment = useContext(ApartmentContext);
@@ -17,8 +18,7 @@ export default function AptCard() {
             <div className="card-body">
                 <h5 className="card-title" data-testid="adName">
                     {title}
-                    {/*<i className={getLikeClasses()}
-                                          onClick={() => onLike(apartment)}> </i>*/}
+                    <LikeToggle key={apartment.id} />
                 </h5>
                 <h6 className="card-subtitle mb-2 text-muted">
                     г. {city},
@@ -27,18 +27,12 @@ export default function AptCard() {
                     д. {house},
                     кв. {room}</h6>
                 <p className="card-text">
-                    <i className="bx bxl-codepen"></i> {area} {unit}
+                    <i className="bx bxl-codepen"/> {area} {unit}
                     <br/>
-                    <i className="bx bx-user"></i> {last_name} {first_name} {middle_name}
+                    <i className="bx bx-user"/> {last_name} {first_name} {middle_name}
                 </p>
             </div>
         </div>
     );
 
-    /* getLikeClasses()
-     {
-         let classes = "bx ";
-         classes += (this.props.liked === false) ? "bx-heart" : "bxs-heart";
-         return classes;
-     }*/
 }
