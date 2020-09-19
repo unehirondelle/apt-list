@@ -4,31 +4,17 @@ import ApartmentsList from "./components/apartmentsList/apartmentsList";
 import axios from "axios";
 import {LikesContext} from "./state/context";
 
-const localStorageKey = "apartmentsListStorage";
-
 export default function App() {
     let [apartments, setApartments] = useState([]);
-
-    useEffect(() => {
-        const storedApartments = JSON.parse(localStorage.getItem(localStorageKey));
-        if (storedApartments) setApartments(storedApartments);
-        console.log("getFromStorage")
-    }, []);
 
     useEffect(() => {
         axios.get("../apt-list/entities.json")
             .then(res => {
                 const apartments = res.data.response;
-                apartments.map(apartment => apartment.liked = false);
+                apartments.map(apartment => apartment.liked);
                 setApartments(apartments);
-                console.log("getData")
             });
     }, []);
-
-    useEffect(() => {
-        localStorage.setItem(localStorageKey, JSON.stringify(apartments));
-        console.log("writeToStorage");
-    }, [apartments]);
 
     return (
         <LikesContext.Provider value={likeToggled}>
